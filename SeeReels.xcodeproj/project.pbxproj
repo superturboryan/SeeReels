@@ -6,8 +6,19 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		94E660C62E1A9EDB0018EB06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 94E65F922E1A73B60018EB06 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 94E65F992E1A73B60018EB06;
+			remoteInfo = SeeReels;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		94E65F9A2E1A73B60018EB06 /* SeeReels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SeeReels.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		94E660C22E1A9EDB0018EB06 /* Unit Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -16,10 +27,22 @@
 			path = SeeReels;
 			sourceTree = "<group>";
 		};
+		94E660C32E1A9EDB0018EB06 /* Unit Tests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Unit Tests";
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		94E65F972E1A73B60018EB06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94E660BF2E1A9EDB0018EB06 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				94E65F9C2E1A73B60018EB06 /* SeeReels */,
+				94E660C32E1A9EDB0018EB06 /* Unit Tests */,
 				94E65F9B2E1A73B60018EB06 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				94E65F9A2E1A73B60018EB06 /* SeeReels.app */,
+				94E660C22E1A9EDB0018EB06 /* Unit Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +95,29 @@
 			productReference = 94E65F9A2E1A73B60018EB06 /* SeeReels.app */;
 			productType = "com.apple.product-type.application";
 		};
+		94E660C12E1A9EDB0018EB06 /* Unit Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94E660C82E1A9EDB0018EB06 /* Build configuration list for PBXNativeTarget "Unit Tests" */;
+			buildPhases = (
+				94E660BE2E1A9EDB0018EB06 /* Sources */,
+				94E660BF2E1A9EDB0018EB06 /* Frameworks */,
+				94E660C02E1A9EDB0018EB06 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				94E660C72E1A9EDB0018EB06 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				94E660C32E1A9EDB0018EB06 /* Unit Tests */,
+			);
+			name = "Unit Tests";
+			packageProductDependencies = (
+			);
+			productName = "Unit Tests";
+			productReference = 94E660C22E1A9EDB0018EB06 /* Unit Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -82,6 +130,10 @@
 				TargetAttributes = {
 					94E65F992E1A73B60018EB06 = {
 						CreatedOnToolsVersion = 16.4;
+					};
+					94E660C12E1A9EDB0018EB06 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 94E65F992E1A73B60018EB06;
 					};
 				};
 			};
@@ -101,12 +153,20 @@
 			projectRoot = "";
 			targets = (
 				94E65F992E1A73B60018EB06 /* SeeReels */,
+				94E660C12E1A9EDB0018EB06 /* Unit Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		94E65F982E1A73B60018EB06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		94E660C02E1A9EDB0018EB06 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -123,7 +183,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		94E660BE2E1A9EDB0018EB06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		94E660C72E1A9EDB0018EB06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 94E65F992E1A73B60018EB06 /* SeeReels */;
+			targetProxy = 94E660C62E1A9EDB0018EB06 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		94E65FA32E1A73B80018EB06 /* Debug */ = {
@@ -307,6 +382,42 @@
 			};
 			name = Release;
 		};
+		94E660C92E1A9EDB0018EB06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T6MXF72738;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "SuperTurboRyan.Unit-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SeeReels.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SeeReels";
+			};
+			name = Debug;
+		};
+		94E660CA2E1A9EDB0018EB06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T6MXF72738;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "SuperTurboRyan.Unit-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SeeReels.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SeeReels";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -324,6 +435,15 @@
 			buildConfigurations = (
 				94E65FA62E1A73B80018EB06 /* Debug */,
 				94E65FA72E1A73B80018EB06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94E660C82E1A9EDB0018EB06 /* Build configuration list for PBXNativeTarget "Unit Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94E660C92E1A9EDB0018EB06 /* Debug */,
+				94E660CA2E1A9EDB0018EB06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

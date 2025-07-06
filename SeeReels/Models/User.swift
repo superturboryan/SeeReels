@@ -29,7 +29,7 @@ struct User: Identifiable, Codable, Equatable {
 }
 
 extension [User] {
-    static func randomSample(_ size: Int) -> [User] {
+    static func randomSample(_ size: Int = 1) -> [User] {
         Array([
             User(
                 id:Int.random(in: 1..<Int.max),
