@@ -8,15 +8,27 @@
 import Foundation
 import OSLog
 
+/// An observable store responsible for loading and publishing pages of `User` objects.
+///
+/// Conforms to `ObservableObject` and uses Swift’s async/await to fetch data from a
+/// provided `UserFetching` service. Automatically loads the first page upon initialization
+/// and exposes published properties for the loaded users and any loading errors.
+///
+/// - Note: All operations occur on the `MainActor`.
 @MainActor
 final class UserStore: ObservableObject {
     
+    /// All the users loaded so far.
     @Published var users: [User] = []
+    
+    /// The most recent error that occurred during a page load, if any.
     @Published var error: Swift.Error?
+    
+    /// The service used to fetch user pages.
+    private var service: UserFetching
     
     // TODO: Helper to access bundle ID from info.plist
     private let log = Logger(subsystem: "com.SuperTurboRyan.SeeReels", category: "\(UserStore.self)")
-    private var service: UserFetching
     
     init(
         users: [User] = [],
