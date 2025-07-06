@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Story: Identifiable, Codable {
+struct Story: Identifiable, Codable, Equatable {
     var id = UUID()
     var seen = false
     var caption: String = .randomCaption

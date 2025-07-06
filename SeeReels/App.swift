@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct SeeReelsApp: App {
+    
+    @StateObject var userStore = UserStore(service: MockUserService())
+    
     var body: some Scene {
         WindowGroup {
-            StoryListView()
+            UserListView()
+                .environmentObject(userStore)
         }
     }
 }

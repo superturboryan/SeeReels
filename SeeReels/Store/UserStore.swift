@@ -25,17 +25,17 @@ final class UserStore: ObservableObject {
         self.users = users
         self.service = service
         Task {
-            try? await loadNextPageOfUsers()
+            await loadNextPageOfUsers()
         }
     }
     
-    func loadNextPageOfUsers() async throws {
+    func loadNextPageOfUsers() async {
         do {
             self.users += try await service.fetchUserPage()
             log("Loaded page of users: \(self.users)")
         } catch {
             log("Error loading next page of users: \(error)", isError: true)
-            throw error
+            self.error = error
         }
     }
     

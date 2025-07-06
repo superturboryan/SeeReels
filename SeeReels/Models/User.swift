@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct User: Identifiable, Codable {
+struct User: Identifiable, Codable, Equatable {
     let id: Int
     let name: String
     let profilePictureURL: String // TODO: Make this a URL, add Coding logic
@@ -21,158 +21,161 @@ struct User: Identifiable, Codable {
 }
 
 extension [User] {
-    static var all: [User] {
-        [
+    static func randomSample(_ size: Int) -> [User] {
+        Array([
             User(
-                id: 1,
+                id:Int.random(in: 1..<Int.max),
                 name: "Neo",
                 profilePictureURL: "https://i.pravatar.cc/300?u=1"
             ),
             User(
-                id: 2,
+                id:Int.random(in: 1..<Int.max),
                 name: "Trinity",
                 profilePictureURL: "https://i.pravatar.cc/300?u=2"
             ),
             User(
-                id: 3,
+                id:Int.random(in: 1..<Int.max),
                 name: "Morpheus",
                 profilePictureURL: "https://i.pravatar.cc/300?u=3"
             ),
             User(
-                id: 4,
+                id:Int.random(in: 1..<Int.max),
                 name: "Smith",
                 profilePictureURL: "https://i.pravatar.cc/300?u=4"
             ),
             User(
-                id: 5,
+                id:Int.random(in: 1..<Int.max),
                 name: "Oracle",
                 profilePictureURL: "https://i.pravatar.cc/300?u=5"
             ),
             User(
-                id: 6,
+                id:Int.random(in: 1..<Int.max),
                 name: "Cypher",
                 profilePictureURL: "https://i.pravatar.cc/300?u=6"
             ),
             User(
-                id: 7,
+                id:Int.random(in: 1..<Int.max),
                 name: "Niobe",
                 profilePictureURL: "https://i.pravatar.cc/300?u=7"
             ),
             User(
-                id: 8,
+                id:Int.random(in: 1..<Int.max),
                 name: "Dozer",
                 profilePictureURL: "https://i.pravatar.cc/300?u=8"
             ),
             User(
-                id: 9,
+                id:Int.random(in: 1..<Int.max),
                 name: "Switch",
                 profilePictureURL: "https://i.pravatar.cc/300?u=9"
             ),
             User(
-                id: 10,
+                id: Int.random(in: 1..<Int.max),
                 name: "Tank",
                 profilePictureURL: "https://i.pravatar.cc/300?u=10"
             ),
             User(
-                id: 11,
+                id: Int.random(in: 1..<Int.max),
                 name: "Seraph",
                 profilePictureURL: "https://i.pravatar.cc/300?u=11"
             ),
             User(
-                id: 12,
+                id: Int.random(in: 1..<Int.max),
                 name: "Sati",
                 profilePictureURL: "https://i.pravatar.cc/300?u=12"
             ),
             User(
-                id: 13,
+                id: Int.random(in: 1..<Int.max),
                 name: "Merovingian",
                 profilePictureURL: "https://i.pravatar.cc/300?u=13"
             ),
             User(
-                id: 14,
+                id: Int.random(in: 1..<Int.max),
                 name: "Persephone",
                 profilePictureURL: "https://i.pravatar.cc/300?u=14"
             ),
             User(
-                id: 15,
+                id: Int.random(in: 1..<Int.max),
                 name: "Ghost",
                 profilePictureURL: "https://i.pravatar.cc/300?u=15"
             ),
             User(
-                id: 16,
+                id: Int.random(in: 1..<Int.max),
                 name: "Lock",
                 profilePictureURL: "https://i.pravatar.cc/300?u=16"
             ),
             User(
-                id: 17,
+                id: Int.random(in: 1..<Int.max),
                 name: "Rama",
                 profilePictureURL: "https://i.pravatar.cc/300?u=17"
             ),
             User(
-                id: 18,
+                id: Int.random(in: 1..<Int.max),
                 name: "Bane",
                 profilePictureURL: "https://i.pravatar.cc/300?u=18"
             ),
             User(
-                id: 19,
+                id: Int.random(in: 1..<Int.max),
                 name: "The Keymaker",
                 profilePictureURL: "https://i.pravatar.cc/300?u=19"
             ),
             User(
-                id: 20,
+                id: Int.random(in: 1..<Int.max),
                 name: "Commander Thadeus",
                 profilePictureURL: "https://i.pravatar.cc/300?u=20"
             ),
             User(
-                id: 21,
+                id: Int.random(in: 1..<Int.max),
                 name: "Kid",
                 profilePictureURL: "https://i.pravatar.cc/300?u=21"
             ),
             User(
-                id: 22,
+                id: Int.random(in: 1..<Int.max),
                 name: "Zee",
                 profilePictureURL: "https://i.pravatar.cc/300?u=22"
             ),
             User(
-                id: 23,
+                id: Int.random(in: 1..<Int.max),
                 name: "Mifune",
                 profilePictureURL: "https://i.pravatar.cc/300?u=23"
             ),
             User(
-                id: 24,
+                id: Int.random(in: 1..<Int.max),
                 name: "Roland",
                 profilePictureURL: "https://i.pravatar.cc/300?u=24"
             ),
             User(
-                id: 25,
+                id: Int.random(in: 1..<Int.max),
                 name: "Cas",
                 profilePictureURL: "https://i.pravatar.cc/300?u=25"
             ),
             User(
-                id: 26,
+                id: Int.random(in: 1..<Int.max),
                 name: "Colt",
                 profilePictureURL: "https://i.pravatar.cc/300?u=26"
             ),
             User(
-                id: 27,
+                id: Int.random(in: 1..<Int.max),
                 name: "Vector",
                 profilePictureURL: "https://i.pravatar.cc/300?u=27"
             ),
             User(
-                id: 28,
+                id: Int.random(in: 1..<Int.max),
                 name: "Sequoia",
                 profilePictureURL: "https://i.pravatar.cc/300?u=28"
             ),
             User(
-                id: 29,
+                id: Int.random(in: 1..<Int.max),
                 name: "Sentinel",
                 profilePictureURL: "https://i.pravatar.cc/300?u=29"
             ),
             User(
-                id: 30,
+                id: Int.random(in: 1..<Int.max),
                 name: "Turing",
                 profilePictureURL: "https://i.pravatar.cc/300?u=30"
             ),
         ]
+            .shuffled()
+            .prefix(size)
+        )
     }
 }

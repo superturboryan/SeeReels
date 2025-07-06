@@ -32,7 +32,7 @@ final class MockUserService: UserFetching {
         
         let users = try await Task {
             try await Task.sleep(for: delay)
-            return [User].all
+            return [User].randomSample(10)
         }.value
         
         return users
