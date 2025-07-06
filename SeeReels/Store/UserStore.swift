@@ -39,6 +39,7 @@ final class UserStore: ObservableObject {
         }
     }
     
+    // TODO: Put this into a Logging protocol
     func log(_ message: String, isError: Bool = false) {
         isError ?
         log.error("\(message, privacy: .public)") :

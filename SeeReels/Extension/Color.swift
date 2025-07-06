@@ -13,41 +13,17 @@ extension Color {
     static let secondarySystemBackground = Color(uiColor: .secondarySystemBackground)
 }
 
-extension UIColor {
+extension AngularGradient {
     
-    static func hex(_ hex: String) -> UIColor {
-        var sanitized = hex.trimmingCharacters(in: .whitespacesAndNewlines)
-        if sanitized.hasPrefix("#") {
-            sanitized.removeFirst()
-        }
-        
-        let length = sanitized.count
-        guard length == 6 else {
-            fatalError()
-        }
-        
-        var rgbValue: UInt64 = 0
-        let scanner = Scanner(string: sanitized)
-        guard scanner.scanHexInt64(&rgbValue) else {
-            fatalError()
-        }
-        
-        let r = CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0
-        let g = CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0
-        let b = CGFloat(rgbValue & 0x0000FF) / 255.0
-        
-        return UIColor(red: r, green: g, blue: b, alpha: 1.0)
-    }
-}
-
-extension LinearGradient {
-    
-    static let igStyle = LinearGradient(
+    static let igStyle = AngularGradient(
         gradient: Gradient(colors: [
-            .blue,
-            .red
+            Color(red: 254/255, green: 218/255, blue: 117/255),
+            Color(red: 250/255, green: 126/255, blue:  30/255),
+            Color(red: 214/255, green:  41/255, blue: 118/255),
+            Color(red: 150/255, green:  47/255, blue: 191/255),
+            Color(red:  79/255, green:  91/255, blue: 213/255),
+            Color(red: 254/255, green: 218/255, blue: 117/255) // loop back
         ]),
-        startPoint: .topLeading,
-        endPoint: .bottomTrailing
+        center: .center
     )
 }

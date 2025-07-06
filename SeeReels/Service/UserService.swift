@@ -22,8 +22,13 @@ protocol UserFetching {
 ///   - errorToThrow: Set this if you want the mock service to fail. Default = nil
 final class MockUserService: UserFetching {
     
-    var delay: Duration = .seconds(2)
+    var delay: Duration
     var errorToThrow: UserFetchingError?
+    
+    init(delay: Duration = .seconds(2), errorToThrow: UserFetchingError? = nil) {
+        self.delay = delay
+        self.errorToThrow = errorToThrow
+    }
     
     func fetchUserPage() async throws -> [User] {
         guard errorToThrow == nil else {
@@ -45,7 +50,11 @@ enum UserFetchingError: LocalizedError {
     
     var errorDescription: String? {
         switch self {
-        case .mockError: "Failed to load the list of users, please try again" // Could use recoveryDescription?
+        case .mockError:
+            """
+            Failed to load the list of users, 
+            please try again
+            """ // Could use recoveryDescription?
         }
     }
 }

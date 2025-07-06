@@ -12,7 +12,15 @@ struct User: Identifiable, Codable, Equatable {
     let name: String
     let profilePictureURL: String // TODO: Make this a URL, add Coding logic
     
-    let stories: [Story] = []
+    let stories: [Story] = [
+        Story(),
+        Story(),
+        Story(),
+    ]
+    
+    var allStoriesSeen: Bool {
+        stories.allSatisfy { $0.seen }
+    }
     
     enum CodingKeys: String, CodingKey {
         case id, name
